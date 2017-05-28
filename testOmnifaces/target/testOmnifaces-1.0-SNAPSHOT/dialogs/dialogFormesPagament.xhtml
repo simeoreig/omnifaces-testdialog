@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Dialog Example</title>
+    </h:head>
+
+    <h:body>
+        <h:form id="formDialog">
+
+            <div class="container">
+                
+                <div>            
+
+                    <label>Put a text:</label>
+                    <p:inputText styleClass="form-control" value="#{beanFormesPagament.formaPagament}"  
+                                 requiredMessage="text is required" id="descripcio" >
+                    </p:inputText>
+
+                    <p:commandButton ajax="true" update="@form" value="Return dialog" actionListener="#{beanFormesPagament.insereixTipus(actionEvent)}" />          
+
+                </div>            
+            </div>           
+
+        </h:form>
+    </h:body>
+
+</html>
